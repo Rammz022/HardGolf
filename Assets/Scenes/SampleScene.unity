@@ -603,7 +603,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1454148007204813559, guid: 7f779eba6d2ecd240ac1c9a711bf596d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.0225515
+      value: -1.01
       objectReference: {fileID: 0}
     - target: {fileID: 1454148007204813559, guid: 7f779eba6d2ecd240ac1c9a711bf596d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -633,9 +633,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3102526646349473009, guid: 7f779eba6d2ecd240ac1c9a711bf596d, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: ee9b861dfefeab34dbe65eb294c01a90, type: 2}
     - target: {fileID: 5641076035690368186, guid: 7f779eba6d2ecd240ac1c9a711bf596d, type: 3}
       propertyPath: m_Name
       value: Mechanics
+      objectReference: {fileID: 0}
+    - target: {fileID: 5641076035690368186, guid: 7f779eba6d2ecd240ac1c9a711bf596d, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -686,6 +694,29 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -1550514412580984892, guid: 98734ad797391cd4393175254a16c36d, type: 3}
+--- !u!136 &7921993193988217831
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 368069316}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.0015628025
+  m_Height: 0.004882133
+  m_Direction: 1
+  m_Center: {x: -0.009770493, y: -0.002560209, z: 0.00002081126}
 --- !u!1001 &8159017763505511067
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -752,6 +783,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8416272007918961125, guid: 98734ad797391cd4393175254a16c36d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7921993193988217827}
+    - targetCorrespondingSourceObject: {fileID: 8416272007918961125, guid: 98734ad797391cd4393175254a16c36d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7921993193988217831}
     - targetCorrespondingSourceObject: {fileID: -7146521406498821007, guid: 98734ad797391cd4393175254a16c36d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1914389805974578534}

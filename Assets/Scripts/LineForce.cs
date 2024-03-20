@@ -1,5 +1,7 @@
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody))] // Добавил после созвона.
+
 public class LineForce : MonoBehaviour {
     [SerializeField] private float shotPower;
     [SerializeField] private float stopVelocity = .05f; 
