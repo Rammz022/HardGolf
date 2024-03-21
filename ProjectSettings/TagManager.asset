@@ -4,10 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - MenuStart
   - MenuOptions
-  - MenuAuthors
+  - MainMenu
   - MenuExit
+  - MenuAuthors
+  - MenuPause
   layers:
   - Default
   - TransparentFX
