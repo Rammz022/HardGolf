@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3421629070956284911}
   - component: {fileID: 3245679441128931499}
   m_Layer: 0
-  m_Name: b_ugol.low
+  m_Name: b_ugol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
