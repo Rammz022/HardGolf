@@ -10,6 +10,6 @@ public class Restball : MonoBehaviour
     // Start is called before the first frame update
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Ой улетели с поля!");
+        Debug.Log("ГЋГ© ГіГ«ГҐГІГҐГ«ГЁ Г± ГЇГ®Г«Гї!");
     }
 }
