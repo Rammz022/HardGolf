@@ -15,7 +15,7 @@ public class LineForce : MonoBehaviour {
 
     private void Awake() {
         rigidbody = GetComponent<Rigidbody>();
-
+        Debug.Log("Test!!");
         isAiming = false;
         lineRenderer.enabled = false;
     }
@@ -29,8 +29,10 @@ public class LineForce : MonoBehaviour {
     }
 
     private void OnMouseDown() {
+        Debug.Log("False!");
         if (isIdle) {
             isAiming = true;
+            Debug.Log("Проблема!");
         }
     }
 
@@ -96,5 +98,10 @@ public class LineForce : MonoBehaviour {
         } else {
             return null;
         }
+    }
+
+    private void Update()
+    {
+      
     }
 }
