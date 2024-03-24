@@ -6,10 +6,10 @@ using UnityEngine.SceneManagement;
 public class Restball : MonoBehaviour
 {
     public Vector3 endPositionBall;
+    public Transform Player;
     // Start is called before the first frame update
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(endPositionBall.ToString());
-        Debug.Log("Oй mы далего за полем!");
+        Debug.Log("ГЋГ© ГіГ«ГҐГІГҐГ«ГЁ Г± ГЇГ®Г«Гї!");
     }
 }
