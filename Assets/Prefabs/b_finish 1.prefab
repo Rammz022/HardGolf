@@ -93,7 +93,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5155341430916607375}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: ee9b861dfefeab34dbe65eb294c01a90, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -120,6 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c71eb07d2222a84b811e16faceda432, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Victory: {fileID: 0}
 --- !u!135 &6844126676367518078
 SphereCollider:
   m_ObjectHideFlags: 0
