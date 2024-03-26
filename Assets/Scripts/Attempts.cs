@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,6 +8,7 @@ public class Attempts : MonoBehaviour
     private int attemptsLeft;
     public Text attemptsText;
     public StartPosition restart;
+    public Rigidbody Rigidbody;
 
     void Start()
     {
@@ -16,7 +18,7 @@ public class Attempts : MonoBehaviour
 
     private void Update()
     {
-        GameLose();
+        UpdateAttemptsText();
     }
 
     void UpdateAttemptsText()
@@ -28,14 +30,26 @@ public class Attempts : MonoBehaviour
     {
         attemptsLeft--;
         UpdateAttemptsText();
+        GameLose();
     }
 
+    private IEnumerator GameOver()
+    {
+        while(Rigidbody.velocity.magnitude > 0.01f)
+        {
+            yield return null;
+        }
+        Debug.Log("Пройгрыш");
+        restart.Restart();
+
+    }
     public void GameLose()
     {
         if (attemptsLeft == 0)
         {
+            Debug.Log("Пройгрыш");
             attemptsLeft = maxAttempts;
-            restart.Restart();
+            StartCoroutine(GameOver());
         }
     }
 
