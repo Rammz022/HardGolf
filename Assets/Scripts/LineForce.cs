@@ -22,7 +22,7 @@ public class LineForce : MonoBehaviour {
 
     private void FixedUpdate() {
         if(rigidbody.velocity.magnitude < stopVelocity) {
-            Stop();
+           Stop();
         }
 
         ProcessAim();
@@ -58,7 +58,7 @@ public class LineForce : MonoBehaviour {
         isAiming = false;
         lineRenderer.enabled = false;
 
-        Vector3 horizontalWorldPoint = new Vector3(worldPoint.x, transform.position.y, worldPoint.z);
+        Vector3 horizontalWorldPoint = new Vector3(worldPoint.x, transform.position.y+0.5f, worldPoint.z);
 
         Vector3 direction = (horizontalWorldPoint - transform.position).normalized;
         float strength = Vector3.Distance(transform.position, horizontalWorldPoint);
@@ -76,8 +76,8 @@ public class LineForce : MonoBehaviour {
     }
 
     private void Stop() {
-        rigidbody.velocity = Vector3.zero;
-        rigidbody.angularVelocity = Vector3.zero;
+        //rigidbody.velocity = Vector3.zero;
+        //rigidbody.angularVelocity = Vector3.zero;
         isIdle = true;
     }
 
@@ -98,10 +98,5 @@ public class LineForce : MonoBehaviour {
         } else {
             return null;
         }
-    }
-
-    private void Update()
-    {
-      
     }
 }
