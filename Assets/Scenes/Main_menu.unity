@@ -319,7 +319,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7328377767472495868, guid: 38801739e65cb494ba3e7245b6b46b9e, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7695252382539358725, guid: 38801739e65cb494ba3e7245b6b46b9e, type: 3}
       propertyPath: m_AnchorMax.x
@@ -553,7 +553,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 786454221}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: e0f94602df804d345b7ac4926c87e83b, type: 3}

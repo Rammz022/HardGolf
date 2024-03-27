@@ -3,15 +3,18 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class BallController : MonoBehaviour
 {
-    public float maxPower = 100f; // Максимальная сила удара
-    public float minPower = 0f;   // Минимальная сила удара
-    public float powerMultiplier = 1f; // Множитель силы удара
-    public float stopThreshold = 0.05f; // Порог скорости для определения остановки мяча
+    public float maxPower = 100f;
+    public float minPower = 0f;
+    public float powerMultiplier = 1f;
+    public float stopThreshold = 0.05f;
+    public float maxLineLength = 10f;
+    public float lineLengthMultiplier = 1f;
 
     private Rigidbody rb;
     private Vector3 hitDirection;
     private float currentPower = 0f;
     private bool isAiming = false;
+    private bool hasReleasedMouseButton = false;
 
     public LineRenderer lineRenderer;
 
@@ -20,31 +23,35 @@ public class BallController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        lineRenderer.enabled = false; // Линия прицеливания изначально не отображается
+        lineRenderer.enabled = false;
     }
 
     void Update()
     {
-        // Проверка на остановку мяча
-        if (rb.velocity.magnitude <= stopThreshold)
+        if (Input.GetMouseButtonDown(0))
         {
-            // Обработка нажатия левой кнопки мыши для прицеливания и удара
-            if (Input.GetMouseButtonDown(0))
-            {
-                isAiming = true;
-            }
-            else if (Input.GetMouseButtonUp(0) && isAiming)
-            {
-                isAiming = false;
-                Shoot();
-                attempts.DecreaseAttempts();
-            }
+            isAiming = true;
+            hasReleasedMouseButton = false;
+        }
+        else if (Input.GetMouseButtonUp(0) && isAiming)
+        {
+            isAiming = false;
+            hasReleasedMouseButton = true;
+           // attempts.DecreaseAttempts();
         }
 
-        // Отображение линии прицеливания (для отладки)
         if (isAiming)
         {
             Aim();
+        }
+    }
+
+    void FixedUpdate()
+    {
+        if (rb.velocity.magnitude <= stopThreshold && hasReleasedMouseButton)
+        {
+            Shoot();
+            hasReleasedMouseButton = false;
         }
     }
 
@@ -55,10 +62,11 @@ public class BallController : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit))
         {
-            hitDirection = (hit.point - transform.position).normalized;
+            Vector3 horizontalHitPoint = new Vector3(hit.point.x, transform.position.y, hit.point.z);
+            hitDirection = (horizontalHitPoint - transform.position).normalized;
             lineRenderer.enabled = true;
             lineRenderer.SetPosition(0, transform.position);
-            lineRenderer.SetPosition(1, hit.point);
+            lineRenderer.SetPosition(1, horizontalHitPoint);
 
             // Определяем силу удара на основе длины линии
             float lineLength = Vector3.Distance(transform.position, hit.point);
@@ -68,11 +76,11 @@ public class BallController : MonoBehaviour
 
     public void Shoot()
     {
-        // Применяем силу удара к мячу
-        rb.AddForce(hitDirection * currentPower, ForceMode.Impulse);
+        rb.AddForce(hitDirection * currentPower , ForceMode.Impulse);
 
-        // Выключаем линию прицеливания
         lineRenderer.enabled = false;
     }
 }
+
+
 

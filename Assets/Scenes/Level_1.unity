@@ -269,6 +269,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 553
       objectReference: {fileID: 0}
+    - target: {fileID: 1107097546030879624, guid: 8f205b1923b033944827af04ac14ed60, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 2744638595762862671, guid: 8f205b1923b033944827af04ac14ed60, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 220
@@ -280,6 +284,10 @@ PrefabInstance:
     - target: {fileID: 3903594647680500692, guid: 8f205b1923b033944827af04ac14ed60, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 6171295970999279404, guid: 8f205b1923b033944827af04ac14ed60, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7412712475586351549, guid: 8f205b1923b033944827af04ac14ed60, type: 3}
       propertyPath: Victory
@@ -365,6 +373,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8634402972328470218, guid: 8f205b1923b033944827af04ac14ed60, type: 3}
+      propertyPath: m_SpriteState.m_HighlightedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e478bfec01d7d2341b59bd425fa22042, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
