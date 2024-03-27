@@ -109,7 +109,7 @@ Material:
     - _DstBlendAlpha: 0
     - _EnvironmentReflections: 1
     - _FloatSpeed: 0.3
-    - _FoamDirect: 5
+    - _FoamDirect: -0.29
     - _FoamSpeed: 0.2
     - _FoamThinck: 3.5
     - _GlossMapScale: 0
