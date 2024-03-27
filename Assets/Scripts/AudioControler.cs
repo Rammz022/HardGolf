@@ -1,27 +1,22 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class AudioControler : MonoBehaviour
 {
     private AudioSource audioSource;
-    private float misicVolume = 1.0f;
-
-
+    private float musicVolume = 0.5f;
 
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        audioSource.volume = misicVolume;
+        audioSource.volume = musicVolume;
     }
 
     public void SetVolume(float volume)
     {
-        misicVolume = volume;
+       musicVolume = volume;
     }
 }
