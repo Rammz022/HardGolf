@@ -3,22 +3,27 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class BallController : MonoBehaviour
 {
-    public float maxPower = 100f;
-    public float minPower = 0f;
+    [SerializeField] private AudioSource _kickBall;
+    
+    public float maxPower = 25;
+    public float minPower = 5;
     public float powerMultiplier = 1f;
     public float stopThreshold = 0.05f;
     public float maxLineLength = 10f;
     public float lineLengthMultiplier = 1f;
+    public LineRenderer lineRenderer;
+
 
     private Rigidbody rb;
     private Vector3 hitDirection;
     private float currentPower = 0f;
     private bool isAiming = false;
     private bool hasReleasedMouseButton = false;
+    private float _maxLength = 2f;
 
-    public LineRenderer lineRenderer;
 
-    public Attempts attempts;
+    
+
 
     void Start()
     {
@@ -35,6 +40,7 @@ public class BallController : MonoBehaviour
         }
         else if (Input.GetMouseButtonUp(0) && isAiming)
         {
+            _kickBall.Play();
             isAiming = false;
             hasReleasedMouseButton = true;
            // attempts.DecreaseAttempts();
@@ -70,7 +76,12 @@ public class BallController : MonoBehaviour
 
             // Определяем силу удара на основе длины линии
             float lineLength = Vector3.Distance(transform.position, hit.point);
-            currentPower = Mathf.Lerp(minPower, maxPower, lineLength / lineRenderer.GetPosition(1).magnitude) * powerMultiplier;
+            Debug.Log(lineLength);
+            if (lineLength > _maxLength) {
+                lineLength = _maxLength;
+            }
+            currentPower = Mathf.Lerp(minPower, maxPower, lineLength / _maxLength) * powerMultiplier;
+            
         }
     }
 

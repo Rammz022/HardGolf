@@ -12,7 +12,7 @@ public class TrigerEndScen : MonoBehaviour
 
     public void NextScen()
     {
-
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        Time.timeScale = 0;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
     }
 }
