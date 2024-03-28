@@ -137,9 +137,21 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 312719700617139981, guid: 9ed425812d678c046bdda180dfef3ff5, type: 3}
+      propertyPath: maxPower
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 312719700617139981, guid: 9ed425812d678c046bdda180dfef3ff5, type: 3}
       propertyPath: _kickBall
       value: 
       objectReference: {fileID: 3081220733753350411}
+    - target: {fileID: 332573926661864573, guid: 9ed425812d678c046bdda180dfef3ff5, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: aa07fcfa49a64004baeec1a9339111b9, type: 2}
+    - target: {fileID: 7273954856849761873, guid: 9ed425812d678c046bdda180dfef3ff5, type: 3}
+      propertyPath: m_Drag
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8535841568448046118, guid: 9ed425812d678c046bdda180dfef3ff5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 35.809
@@ -182,7 +194,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9024850823421345436, guid: 9ed425812d678c046bdda180dfef3ff5, type: 3}
       propertyPath: m_Name
-      value: Ball_pivot Variant
+      value: Ball_sound
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
