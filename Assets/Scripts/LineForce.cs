@@ -7,7 +7,6 @@ public class LineForce : MonoBehaviour {
     [SerializeField] private float stopVelocity = .05f; 
 
 	[SerializeField] private LineRenderer lineRenderer;
-
     private bool isIdle;
     private bool isAiming;
 
@@ -94,7 +93,9 @@ public class LineForce : MonoBehaviour {
         Vector3 worldMousePosNear = Camera.main.ScreenToWorldPoint(screenMousePosNear);
         RaycastHit hit;
         if (Physics.Raycast(worldMousePosNear, worldMousePosFar - worldMousePosNear, out hit, float.PositiveInfinity)) {
+            
             return hit.point;
+
         } else {
             return null;
         }
