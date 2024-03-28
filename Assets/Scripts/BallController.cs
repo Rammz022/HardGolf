@@ -19,7 +19,6 @@ public class BallController : MonoBehaviour
 
     public LineRenderer lineRenderer;
 
-    public Attempts attempts;
 
     void Start()
     {
