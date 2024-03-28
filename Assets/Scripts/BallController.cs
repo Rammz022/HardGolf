@@ -4,7 +4,7 @@ using UnityEngine;
 public class BallController : MonoBehaviour
 {
     [SerializeField] private AudioSource _kickBall;
-    
+
     public float maxPower = 25;
     public float minPower = 5;
     public float powerMultiplier = 1f;
@@ -20,9 +20,6 @@ public class BallController : MonoBehaviour
     private bool isAiming = false;
     private bool hasReleasedMouseButton = false;
     private float _maxLength = 2f;
-
-
-    
 
 
     void Start()
@@ -43,7 +40,7 @@ public class BallController : MonoBehaviour
             _kickBall.Play();
             isAiming = false;
             hasReleasedMouseButton = true;
-           // attempts.DecreaseAttempts();
+            // attempts.DecreaseAttempts();
         }
 
         if (isAiming)
@@ -77,17 +74,18 @@ public class BallController : MonoBehaviour
             // Определяем силу удара на основе длины линии
             float lineLength = Vector3.Distance(transform.position, hit.point);
             Debug.Log(lineLength);
-            if (lineLength > _maxLength) {
+            if (lineLength > _maxLength)
+            {
                 lineLength = _maxLength;
             }
             currentPower = Mathf.Lerp(minPower, maxPower, lineLength / _maxLength) * powerMultiplier;
-            
+
         }
     }
 
     public void Shoot()
     {
-        rb.AddForce(hitDirection * currentPower , ForceMode.Impulse);
+        rb.AddForce(hitDirection * currentPower, ForceMode.Impulse);
 
         lineRenderer.enabled = false;
     }
