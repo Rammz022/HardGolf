@@ -133,8 +133,8 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _BaseColor: {r: 0.4784314, g: 0.4784314, b: 0.4784314, a: 1}
-    - _Color: {r: 0.18845674, g: 0.27416635, b: 0.3301887, a: 1}
-    - _ColorDirect: {r: 1.637492, g: 0.21891603, b: 0, a: 0}
+    - _Color: {r: 0.10196078, g: 0.14804232, b: 0.39607844, a: 1}
+    - _ColorDirect: {r: 0.61960787, g: 0.16047753, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _FlowDirect: {r: 0.1, g: 0.3, b: 0, a: 0}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
