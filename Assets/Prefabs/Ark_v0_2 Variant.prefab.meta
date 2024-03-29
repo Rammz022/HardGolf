@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Prefabs/Ark_v0_2 Variant.prefab.meta
 guid: ca4c44a030a35cb48b64eb32275350b4
 PrefabImporter:
+========
+guid: 56d179884e743884799f68c66dbaae56
+DefaultImporter:
+>>>>>>>> 82c9a0f5fb9037920896ec357fb1556b6a647e9a:Assets/Scenes/Level_5 1.unity.meta
   externalObjects: {}
   userData: 
   assetBundleName: 

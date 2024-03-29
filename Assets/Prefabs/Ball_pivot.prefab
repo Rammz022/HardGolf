@@ -283,8 +283,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc533344ce08c59449a4be84a221e1d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxPower: 100
-  minPower: 0
+  maxPower: 90
+  minPower: 5
   powerMultiplier: 1
   stopThreshold: 0.05
   maxLineLength: 10
