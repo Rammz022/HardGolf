@@ -5,8 +5,8 @@ public class BallController : MonoBehaviour
 {
     [SerializeField] private AudioSource _kickBall;
 
-    public float maxPower = 25;
-    public float minPower = 5;
+    public float maxPower = 35f;
+    public float minPower = 5f;
     public float powerMultiplier = 1f;
     public float stopThreshold = 0.05f;
     public float maxLineLength = 10f;
@@ -73,7 +73,7 @@ public class BallController : MonoBehaviour
 
             // Определяем силу удара на основе длины линии
             float lineLength = Vector3.Distance(transform.position, hit.point);
-            Debug.Log(lineLength);
+            //Debug.Log(lineLength);
             if (lineLength > _maxLength)
             {
                 lineLength = _maxLength;

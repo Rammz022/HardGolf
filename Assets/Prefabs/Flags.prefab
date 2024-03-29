@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6976802572842927607}
   - component: {fileID: 4749572018996431917}
-  - component: {fileID: 6025315707660747881}
+  - component: {fileID: 2533504300079748343}
   m_Layer: 0
   m_Name: Flags
   m_TagString: Untagged
@@ -47,8 +47,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animator: {fileID: 4059398876679937871}
---- !u!135 &6025315707660747881
-SphereCollider:
+--- !u!65 &2533504300079748343
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -62,12 +62,12 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 1.5592655
-  m_Center: {x: -1.0592655, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 1.24, y: 1.82, z: 0.19}
 --- !u!1001 &7318193832534137193
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 1.2470359, g: 0.65630305, b: 0.60739607, a: 1}
+  m_IndirectSpecularColor: {r: 1.2455751, g: 0.6560512, b: 0.60736215, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -538,6 +538,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2533504300079748343, guid: a0b279f58d366d24ea55691599e3111f, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4113905477629167915, guid: a0b279f58d366d24ea55691599e3111f, type: 3}
       propertyPath: m_Name
       value: Flags
@@ -552,7 +556,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6976802572842927607, guid: a0b279f58d366d24ea55691599e3111f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 18.49
+      value: 18.425
       objectReference: {fileID: 0}
     - target: {fileID: 6976802572842927607, guid: a0b279f58d366d24ea55691599e3111f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -804,7 +808,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 5aa89b75000292c42a79508c21bb1d5f, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 108a85d72c7c6e243ba2eb177ddcffed, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.53
   m_Pitch: 0.44
@@ -1459,7 +1463,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 748448445922321957, guid: 310e2a333ba8df94cb18989c0f55ff82, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.928833
+      value: 0.79
       objectReference: {fileID: 0}
     - target: {fileID: 748448445922321957, guid: 310e2a333ba8df94cb18989c0f55ff82, type: 3}
       propertyPath: m_LocalPosition.z

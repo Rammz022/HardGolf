@@ -138,7 +138,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 312719700617139981, guid: 9ed425812d678c046bdda180dfef3ff5, type: 3}
       propertyPath: maxPower
-      value: 30
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 312719700617139981, guid: 9ed425812d678c046bdda180dfef3ff5, type: 3}
       propertyPath: _kickBall
